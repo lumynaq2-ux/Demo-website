@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a10">
+  <meta name="description" content="Skillora Academy — premium online learning platform demo.">
+  <title>Skillora Academy — Admin Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <a href="#" class="brand" data-page="overview">
+      <span class="brand-mark">S</span>
+      <span><b>skillora<span class="purple">.</span></b><small>ACADEMY STUDIO</small></span>
+    </a>
+
+    <div class="workspace">
+      <div class="workspace-logo">SA</div>
+      <div class="workspace-copy"><b>Skillora Academy</b><small>Pro workspace</small></div>
+      <span class="muted">⌄</span>
+    </div>
+
+    <div class="nav-heading">WORKSPACE</div>
+    <nav class="navigation">
+      <button class="nav-link active" data-page="overview"><span>◫</span>Overview</button>
+      <button class="nav-link" data-page="courses"><span>▤</span>Courses <small class="nav-badge" id="navCourseCount">6</small></button>
+      <button class="nav-link" data-page="students"><span>♧</span>Students</button>
+      <button class="nav-link" data-page="orders"><span>▧</span>Orders</button>
+      <button class="nav-link" data-page="analytics"><span>↗</span>Analytics</button>
+    </nav>
+
+    <div class="nav-heading">CONTENT & GROWTH</div>
+    <nav class="navigation">
+      <button class="nav-link" data-page="library"><span>▣</span>Content library</button>
+      <button class="nav-link" data-page="coupons"><span>◇</span>Coupons</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="support-card">
+        <div class="support-spark">✦</div>
+        <b>Growing together.</b>
+        <p>Your next big idea could be your most popular course.</p>
+        <button id="helpBtn">Explore the demo ↗</button>
+      </div>
+      <button class="nav-link" data-page="settings"><span>⚙</span>Settings</button>
+      <div class="profile">
+        <div class="avatar avatar-purple">AD</div>
+        <div class="profile-copy"><b>Alex Morgan</b><small>Administrator</small></div>
+        <button class="icon-plain" id="profileBtn" aria-label="Profile menu">•••</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button>
+      <div class="breadcrumb"><span>Workspace</span><span>/</span><b id="breadcrumbTitle">Overview</b></div>
+      <div class="top-actions">
+        <label class="search-box global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search anything..."><kbd>⌘ K</kbd></label>
+        <button class="icon-button" id="notificationBtn" aria-label="Notifications">♧<i></i></button>
+        <div class="avatar avatar-purple">AD</div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <section class="page active" id="page-overview">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="live-dot"></span> YOUR BUSINESS AT A GLANCE</div>
+            <h1>Good morning, Alex <span class="wave">✦</span></h1>
+            <p class="subtitle">Here's what's happening with your academy today.</p>
+          </div>
+          <div class="welcome-buttons">
+            <button class="btn btn-secondary" id="exportReport">↓ Export report</button>
+            <button class="btn btn-primary" data-modal="courseModal">＋ Create course</button>
+          </div>
+        </div>
+
+        <div class="notice" id="notice">
+          <span class="notice-icon">✦</span>
+          <div><b>Your academy is looking great!</b><p>Your learning business is growing. Explore your latest performance below.</p></div>
+          <button class="icon-plain" id="dismissNotice" aria-label="Dismiss">×</button>
+        </div>
+
+        <div class="section-heading">
+          <div><h2>Performance overview</h2><p class="subtitle">Your academy's key numbers in one place.</p></div>
+          <select id="overviewPeriod" class="select-control"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span>Total revenue</span><span class="stat-icon violet">₹</span></div>
+            <div class="stat-value" id="revenueValue">₹2,48,500</div>
+            <div class="stat-foot"><span class="trend">↗ 12.8%</span><span>vs previous period</span></div>
+            <div class="mini-bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:38%"></i><i style="height:58%"></i><i style="height:50%"></i><i style="height:72%"></i><i style="height:60%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:100%"></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Active students</span><span class="stat-icon blue">♧</span></div>
+            <div class="stat-value">1,284</div>
+            <div class="stat-foot"><span class="trend">↗ 8.2%</span><span>vs previous period</span></div>
+            <div class="mini-bars blue-bars"><i style="height:50%"></i><i style="height:35%"></i><i style="height:65%"></i><i style="height:48%"></i><i style="height:72%"></i><i style="height:58%"></i><i style="height:80%"></i><i style="height:68%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Published courses</span><span class="stat-icon amber">▤</span></div>
+            <div class="stat-value" id="courseStat">6</div>
+            <div class="stat-foot"><span class="trend">+2 courses</span><span>this month</span></div>
+            <div class="mini-bars amber-bars"><i style="height:35%"></i><i style="height:50%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:60%"></i><i style="height:72%"></i><i style="height:80%"></i><i style="height:75%"></i><i style="height:100%"></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Conversion rate</span><span class="stat-icon green">↗</span></div>
+            <div class="stat-value">4.8%</div>
+            <div class="stat-foot"><span class="trend">↗ 0.6%</span><span>vs previous period</span></div>
+            <div class="mini-bars green-bars"><i style="height:25%"></i><i style="height:40%"></i><i style="height:33%"></i><i style="height:58%"></i><i style="height:46%"></i><i style="height:68%"></i><i style="height:62%"></i><i style="height:80%"></i><i style="height:75%"></i><i style="height:100%"></i></div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel revenue-panel">
+            <div class="panel-heading"><div><h2>Revenue analytics</h2><p>Track your academy's growth over time.</p></div><span class="legend"><i></i> Revenue</span></div>
+            <div class="chart-total"><strong id="chartTotal">₹2,48,500</strong><span class="trend">↗ 12.8%</span></div>
+            <div class="chart-layout">
+              <div class="y-labels"><span>₹3L</span><span>₹2L</span><span>₹1L</span><span>₹0</span></div>
+              <div class="chart-plot">
+                <div class="chart-grid"><i></i><i></i><i></i><i></i></div>
+                <svg viewBox="0 0 700 210" preserveAspectRatio="none" role="img" aria-label="Illustrative revenue chart">
+                  <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9865ff" stop-opacity=".38"/><stop offset="100%" stop-color="#9865ff" stop-opacity="0"/></linearGradient></defs>
+                  <path id="areaPath" d="M0 165 C50 145 70 172 110 130 S175 150 220 110 S280 130 325 88 S390 105 435 76 S500 105 545 55 S630 80 700 20 L700 210 L0 210Z" fill="url(#fill)"/>
+                  <path id="linePath" d="M0 165 C50 145 70 172 110 130 S175 150 220 110 S280 130 325 88 S390 105 435 76 S500 105 545 55 S630 80 700 20" fill="none" stroke="#a982ff" stroke-width="3" vector-effect="non-scaling-stroke"/>
+                  <circle cx="545" cy="55" r="5" fill="#d4bfff" stroke="#17131f" stroke-width="3"/>
+                </svg>
+                <div class="x-labels"><span>01 Oct</span><span>06 Oct</span><span>11 Oct</span><span>16 Oct</span><span>21 Oct</span><span>26 Oct</span><span>30 Oct</span></div>
+              </div>
+            </div>
+            <div class="chart-note"><span class="live-dot"></span> Illustrative sample data for demo purposes</div>
+          </article>
+          <article class="panel">
+            <div class="panel-heading"><div><h2>Top performing</h2><p>Popular learning products.</p></div><button class="text-btn" data-page="courses">View all ↗</button></div>
+            <div class="top-course-list" id="topCourses"></div>
+          </article>
+        </div>
+
+        <article class="panel">
+          <div class="panel-heading"><div><h2>Recent orders</h2><p>Your latest demo transactions.</p></div><button class="btn btn-secondary btn-small" data-page="orders">View all orders ↗</button></div>
+          <div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>COURSE</th><th>DATE</th><th>AMOUNT</th><th>STATUS</th></tr></thead><tbody id="recentOrders"></tbody></table></div>
+        </article>
+      </section>
+
+      <section class="page" id="page-courses">
+        <div class="page-heading"><div><div class="eyebrow">YOUR KNOWLEDGE, YOUR BUSINESS</div><h1>Course library</h1><p class="subtitle">Create, organize and manage your learning products.</p></div><button class="btn btn-primary" data-modal="courseModal">＋ Create course</button></div>
+        <div class="filter-row"><label class="search-box"><span>⌕</span><input id="courseSearch" type="search" placeholder="Search courses..."></label><select class="select-control" id="courseCategory"><option value="all">All categories</option><option>Development</option><option>Design</option><option>Marketing</option><option>Business</option></select><select class="select-control" id="courseStatus"><option value="all">All statuses</option><option>Published</option><option>Draft</option></select></div>
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="page" id="page-students">
+        <div class="page-heading"><div><div class="eyebrow">YOUR LEARNING COMMUNITY</div><h1>Students</h1><p class="subtitle">Manage enrollments and follow learner activity.</p></div><button class="btn btn-secondary" id="exportStudents">↓ Export students</button></div>
+        <div class="stats-grid compact-stats">
+          <article class="stat-card"><span>Total students</span><div class="stat-value">1,284</div><div class="stat-foot">Across all courses</div></article>
+          <article class="stat-card"><span>New this month</span><div class="stat-value">186</div><div class="stat-foot"><span class="trend">↗ 14.2%</span></div></article>
+          <article class="stat-card"><span>Course completion</span><div class="stat-value">72.4%</div><div class="stat-foot">Average progress</div></article>
+          <article class="stat-card"><span>Active learners</span><div class="stat-value">846</div><div class="stat-foot">Last 30 days</div></article>
+        </div>
+        <article class="panel"><div class="panel-heading"><div><h2>All students</h2><p>Sample records for this interactive demo.</p></div><label class="search-box"><span>⌕</span><input id="studentSearch" type="search" placeholder="Find a student..."></label></div><div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>ENROLLED COURSE</th><th>JOINED</th><th>PROGRESS</th><th>STATUS</th></tr></thead><tbody id="studentTable"></tbody></table></div></article>
+      </section>
+
+      <section class="page" id="page-orders">
+        <div class="page-heading"><div><div class="eyebrow">TRANSACTIONS & PAYMENTS</div><h1>Orders</h1><p class="subtitle">Review course purchases and payment statuses.</p></div><button class="btn btn-secondary" id="exportOrders">↓ Export orders</button></div>
+        <div class="stats-grid compact-stats"><article class="stat-card"><span>Total orders</span><div class="stat-value" id="orderCount">1,092</div><div class="stat-foot">Illustrative all-time total</div></article><article class="stat-card"><span>Gross revenue</span><div class="stat-value">₹2.48L</div><div class="stat-foot"><span class="trend">↗ 12.8%</span></div></article><article class="stat-card"><span>Successful</span><div class="stat-value">1,047</div><div class="stat-foot">95.9% success rate</div></article><article class="stat-card"><span>Pending review</span><div class="stat-value">12</div><div class="stat-foot">Sample data</div></article></div>
+        <article class="panel"><div class="panel-heading"><div><h2>All orders</h2><p>Filter and review demo transactions.</p></div><select class="select-control" id="orderFilter"><option value="all">All statuses</option><option value="Paid">Paid</option><option value="Pending">Pending</option><option value="Refunded">Refunded</option></select></div><div class="table-wrap"><table><thead><tr><th>ORDER ID</th><th>STUDENT</th><th>COURSE</th><th>DATE</th><th>AMOUNT</th><th>STATUS</th></tr></thead><tbody id="ordersTable"></tbody></table></div></article>
+      </section>
+
+      <section class="page" id="page-analytics">
+        <div class="page-heading"><div><div class="eyebrow">MEASURE WHAT MATTERS</div><h1>Analytics</h1><p class="subtitle">Understand your learning business performance.</p></div><select id="analyticsPeriod" class="select-control"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select></div>
+        <div class="stats-grid"><article class="stat-card"><span>Gross revenue</span><div class="stat-value">₹2,48,500</div><div class="stat-foot"><span class="trend">↗ 12.8%</span></div></article><article class="stat-card"><span>New enrollments</span><div class="stat-value">186</div><div class="stat-foot"><span class="trend">↗ 8.2%</span></div></article><article class="stat-card"><span>Average order</span><div class="stat-value">₹2,275</div><div class="stat-foot">Sample calculation</div></article><article class="stat-card"><span>Conversion rate</span><div class="stat-value">4.8%</div><div class="stat-foot"><span class="trend">↗ 0.6%</span></div></article></div>
+        <article class="panel"><div class="panel-heading"><div><h2>Revenue performance</h2><p>Illustrative revenue trend for presentation.</p></div><span class="legend"><i></i> Revenue</span></div><div class="large-chart"><div class="chart-layout"><div class="y-labels"><span>₹3L</span><span>₹2L</span><span>₹1L</span><span>₹0</span></div><div class="chart-plot"><div class="chart-grid"><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 700 210" preserveAspectRatio="none"><path d="M0 175 C50 150 70 172 110 130 S175 150 220 110 S280 130 325 88 S390 105 435 76 S500 105 545 55 S630 80 700 20 L700 210 L0 210Z" fill="url(#fill)"/><path d="M0 175 C50 150 70 172 110 130 S175 150 220 110 S280 130 325 88 S390 105 435 76 S500 105 545 55 S630 80 700 20" fill="none" stroke="#a982ff" stroke-width="3" vector-effect="non-scaling-stroke"/></svg><div class="x-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span><span>Week 5</span></div></div></div></div></article>
+      </section>
+
+      <section class="page" id="page-library">
+        <div class="page-heading"><div><div class="eyebrow">YOUR DIGITAL CLASSROOM</div><h1>Content library</h1><p class="subtitle">Manage lesson resources in this front-end demo.</p></div><button class="btn btn-primary" data-modal="uploadModal">＋ Add resource</button></div>
+        <div class="resource-grid" id="resourceGrid"></div>
+        <article class="panel upload-panel"><div class="upload-symbol">⇧</div><h2>Bring your lessons together</h2><p>Add a sample video or PDF resource to preview the content workflow.</p><button class="btn btn-primary" data-modal="uploadModal">Add content resource</button><small>Demo only: real cloud uploads require backend storage.</small></article>
+      </section>
+
+      <section class="page" id="page-coupons">
+        <div class="page-heading"><div><div class="eyebrow">PROMOTIONS & GROWTH</div><h1>Coupons</h1><p class="subtitle">Preview how discount codes could be managed.</p></div><button class="btn btn-primary" data-modal="couponModal">＋ Create coupon</button></div>
+        <article class="panel"><div class="panel-heading"><div><h2>Discount codes</h2><p>Sample promotional campaigns.</p></div></div><div class="table-wrap"><table><thead><tr><th>CODE</th><th>DISCOUNT</th><th>USES</th><th>STATUS</th></tr></thead><tbody id="couponTable"></tbody></table></div></article>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="page-heading"><div><div class="eyebrow">MAKE IT YOURS</div><h1>Settings</h1><p class="subtitle">Academy profile and platform preferences.</p></div></div>
+        <article class="panel settings-panel"><div class="settings-section"><div><h2>Academy profile</h2><p>Update the name shown in your demo workspace.</p></div><form id="settingsForm" class="settings-form"><label>Academy name<input id="academyName" value="Skillora Academy" required></label><label>Support email<input type="email" id="supportEmail" value="hello@example.com" required></label><label>Currency<select id="currency"><option value="INR">INR — Indian Rupee</option><option value="USD">USD — US Dollar</option></select></label><button class="btn btn-primary" type="submit">Save preferences</button></form></div><div class="settings-section"><div><h2>Appearance</h2><p>Current workspace theme.</p></div><div class="theme-preview"><span class="theme-swatch"></span><span><b>Midnight Purple</b><small>Dark theme · Purple accents</small></span><span class="status-pill published">Active</span></div></div><div class="settings-section"><div><h2>Platform status</h2><p>Features shown in this prototype.</p></div><div class="feature-status"><span>Frontend interface</span><span class="status-pill published">Available</span><span>Real authentication</span><span class="status-pill draft">Not connected</span><span>Payment gateway</span><span class="status-pill draft">Not connected</span><span>Cloud file storage</span><span class="status-pill draft">Not connected</span></div></div></article>
+      </section>
+
+    </div>
+    <footer class="footer"><span>© 2026 Skillora Academy</span><span><i class="live-dot"></i> Interactive demo environment</span></footer>
+  </main>
+</div>
+
+<!-- COURSE MODAL -->
+<div class="modal-backdrop" id="courseModal" aria-hidden="true">
+  <div class="modal">
+    <div class="modal-head"><div><div class="eyebrow">EXPAND YOUR ACADEMY</div><h2>Create a course</h2><p class="subtitle">Add a new product to the demo catalogue.</p></div><button class="icon-plain close-modal" aria-label="Close">×</button></div>
+    <form id="courseForm">
+      <label>Course title<input name="title" placeholder="e.g. Complete UI/UX Masterclass" required maxlength="80"></label>
+      <div class="form-row"><label>Category<select name="category"><option>Development</option><option>Design</option><option>Marketing</option><option>Business</option></select></label><label>Price (₹)<input name="price" type="number" min="0" max="1000000" value="1499" required></label></div>
+      <label>Short description<textarea name="description" placeholder="What will students learn?" rows="3" maxlength="220"></textarea></label>
+      <label>Cover image URL (optional)<input name="image" type="url" placeholder="https://example.com/image.jpg"></label>
+      <div class="modal-actions"><button type="button" class="btn btn-secondary close-modal">Cancel</button><button type="submit" class="btn btn-primary">Create course ↗</button></div>
+    </form>
+  </div>
+</div>
+
+<!-- RESOURCE MODAL -->
+<div class="modal-backdrop" id="uploadModal" aria-hidden="true">
+  <div class="modal">
+    <div class="modal-head"><div><div class="eyebrow">CONTENT STUDIO</div><h2>Add a resource</h2><p class="subtitle">Preview your video and PDF content workflow.</p></div><button class="icon-plain close-modal" aria-label="Close">×</button></div>
+    <form id="resourceForm">
+      <label>Resource title<input name="title" required placeholder="e.g. Introduction to the course"></label>
+      <label>Resource type<select name="type"><option>Video</option><option>PDF</option><option>Document</option></select></label>
+      <label>Resource URL (optional)<input name="url" type="url" placeholder="https://example.com/resource"></label>
+      <div class="demo-warning">This prototype records a resource entry only. It does not upload files to a server.</div>
+      <div class="modal-actions"><button type="button" class="btn btn-secondary close-modal">Cancel</button><button type="submit" class="btn btn-primary">Add resource</button></div>
+    </form>
+  </div>
+</div>
+
+<!-- COUPON MODAL -->
+<div class="modal-backdrop" id="couponModal" aria-hidden="true">
+  <div class="modal">
+    <div class="modal-head"><div><div class="eyebrow">GROW YOUR SALES</div><h2>Create a coupon</h2></div><button class="icon-plain close-modal" aria-label="Close">×</button></div>
+    <form id="couponForm"><label>Coupon code<input name="code" required maxlength="24" placeholder="WELCOME10"></label><label>Discount percentage<input name="discount" type="number" min="1" max="100" required value="10"></label><div class="modal-actions"><button type="button" class="btn btn-secondary close-modal">Cancel</button><button type="submit" class="btn btn-primary">Create coupon</button></div></form>
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+</body>
+</html>
